@@ -27,8 +27,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Tests
         run: pytest -q
-      - name: Backfill recent TXSE history
-        run: python -m txse_scraper.history --output data/txse_daily.csv
+      - name: Backfill TXSE history from live trading launch
+        run: python -m txse_scraper.history --start 2026-07-10 --output data/txse_daily.csv
       - name: Generate rolling analysis
         run: python -m txse_scraper.analyze --input data/txse_daily.csv --output reports/latest.md
       - name: Commit updated history and report
