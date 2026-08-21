@@ -31,15 +31,19 @@ jobs:
         run: python -m txse_scraper.history --start 2026-07-10 --output data/txse_daily.csv
       - name: Generate rolling analysis
         run: python -m txse_scraper.analyze --input data/txse_daily.csv --output reports/latest.md
-      - name: Commit updated history and report
+      - name: Generate weekly evolution table and report
+        run: python -m txse_scraper.weekly --input data/txse_daily.csv --csv data/txse_weekly.csv --report reports/weekly_evolution.md
+      - name: Generate weekly charts
+        run: python -m txse_scraper.charts --input data/txse_weekly.csv --outdir reports/charts
+      - name: Commit updated history, reports and charts
         run: |
-          if [ -z "$(git status --porcelain -- data/txse_daily.csv reports/latest.md)" ]; then
-            echo "No changed TXSE data."
+          if [ -z "$(git status --porcelain -- data/ reports/)" ]; then
+            echo "No changed TXSE data or reports."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/txse_daily.csv reports/latest.md
-          git commit -m "data: update TXSE volume and analysis"
+          git add data/ reports/
+          git commit -m "data: update TXSE history and weekly evolution"
           git pull --rebase origin main
           git push
