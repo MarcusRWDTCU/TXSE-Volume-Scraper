@@ -28,14 +28,16 @@ jobs:
       - name: Tests
         run: pytest -q
       - name: Backfill TXSE history from live trading launch
-        run: python -m txse_scraper.history --start 2026-07-10 --output data/txse_daily.csv
+        run: python -m txse_scraper.history --start 2026-07-06 --output data/txse_daily.csv
       - name: Generate rolling analysis
         run: python -m txse_scraper.analyze --input data/txse_daily.csv --output reports/latest.md
       - name: Generate weekly evolution table and report
         run: python -m txse_scraper.weekly --input data/txse_daily.csv --csv data/txse_weekly.csv --report reports/weekly_evolution.md
       - name: Generate weekly charts
         run: python -m txse_scraper.charts --input data/txse_weekly.csv --outdir reports/charts
-      - name: Commit updated history, reports and charts
+      - name: Generate ORC volume and behavior diagnostics
+        run: python -m txse_scraper.diagnostics
+      - name: Commit all updated outputs
         run: |
           if [ -z "$(git status --porcelain -- data/ reports/)" ]; then
             echo "No changed TXSE data or reports."

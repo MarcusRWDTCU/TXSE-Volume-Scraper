@@ -79,11 +79,11 @@ def write_csv(rows, path):
 
 def write_report(rows, path):
     path.parent.mkdir(parents=True, exist_ok=True)
-    lines = ["# TXSE Weekly Evolution", "", "Weekly aggregation of Texas Stock Exchange (F) trading activity.", "", "| Week | Days | Shares | ADV | Notional | Trades | Consolidated share | Lit exchange share | WoW ADV | Tape A | Tape B | Tape C |", "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    lines = ["# TXSE Weekly Evolution", "", "Weekly aggregation of Texas Stock Exchange (F) trading activity.", "", "| Week | Days | Shares | ADV | Notional | Trades | Consolidated share | Exchange-only share | WoW ADV | Tape A | Tape B | Tape C |", "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for r in rows:
         wow = "—" if r["wow_adv_pct"] is None else f"{r['wow_adv_pct']:+.1f}%"
         lines.append(f"| {r['week_start']} to {r['week_end']} | {r['trading_days']} | {fmt_num(r['share_volume'])} | {fmt_num(r['avg_daily_volume'])} | {fmt_money(r['dollar_volume'])} | {fmt_num(r['trade_count'])} | {r['consolidated_market_share_pct']:.3f}% | {r['lit_market_share_pct']:.3f}% | {wow} | {r['tape_a_pct']:.1f}% | {r['tape_b_pct']:.1f}% | {r['tape_c_pct']:.1f}% |")
-    lines += ["", "**Definitions:** Consolidated market share uses total U.S. consolidated reported volume, matching Cboe's published market-share convention. Lit exchange share excludes FINRA/TRF off-exchange volume and compares TXSE only with exchange-matched volume.", "", "Source: Cboe Global Markets U.S. Equities Historical Market Volume.", ""]
+    lines += ["", "**Definitions:** Consolidated market share uses total U.S. consolidated reported volume, matching Cboe's published market-share convention. Exchange-only share excludes FINRA/TRF off-exchange volume and compares TXSE only with exchange-matched volume.", "", "Source: Cboe Global Markets U.S. Equities Historical Market Volume.", ""]
     path.write_text("\n".join(lines), encoding="utf-8")
 
 

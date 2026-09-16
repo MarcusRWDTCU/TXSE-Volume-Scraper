@@ -25,6 +25,7 @@ def save_line(x, y, title, ylabel, path):
     ax.tick_params(axis="x", rotation=45)
     fig.tight_layout()
     fig.savefig(path, dpi=160)
+    fig.savefig(path.with_suffix(".svg"))
     plt.close(fig)
 
 
@@ -39,7 +40,7 @@ def main(argv=None):
     save_line(x,[f(r["avg_daily_volume"])/1e6 for r in rows],"TXSE Average Daily Share Volume","ADV (millions of shares)",out/"weekly_adv.png")
     save_line(x,[f(r["avg_daily_notional"])/1e6 for r in rows],"TXSE Average Daily Notional","Average daily notional ($m)",out/"weekly_notional.png")
     save_line(x,[f(r["consolidated_market_share_pct"]) for r in rows],"TXSE Consolidated U.S. Market Share","Market share (%)",out/"weekly_consolidated_share.png")
-    save_line(x,[f(r["lit_market_share_pct"]) for r in rows],"TXSE Share of Lit Exchange Volume","Lit exchange share (%)",out/"weekly_lit_share.png")
+    save_line(x,[f(r["lit_market_share_pct"]) for r in rows],"TXSE Share of Exchange Volume","Exchange-only share (%)",out/"weekly_lit_share.png")
     print(f"Generated charts in {out}")
     return 0
 

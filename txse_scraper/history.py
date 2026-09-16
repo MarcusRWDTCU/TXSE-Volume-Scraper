@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import argparse, csv, io
+import argparse, csv, io, hashlib, json
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 import requests
@@ -26,6 +26,15 @@ def num(v, integer=False):
 def fetch_year(year: int, timeout=45):
     r = requests.get(URL.format(year=year), timeout=timeout, headers={"User-Agent":"TXSEVolumeCollector/2.1"})
     r.raise_for_status()
+    raw = Path('data/raw')
+    raw.mkdir(parents=True, exist_ok=True)
+    target = raw / f'market_history_{year}.csv'
+    target.write_bytes(r.content)
+    (raw / f'market_history_{year}.json').write_text(json.dumps({
+        'url': r.url, 'retrieved_at_utc': datetime.now(timezone.utc).isoformat(),
+        'sha256': hashlib.sha256(r.content).hexdigest(),
+        'last_modified': r.headers.get('Last-Modified')
+    }, indent=2) + '\n')
     return list(csv.DictReader(io.StringIO(r.text)))
 
 
