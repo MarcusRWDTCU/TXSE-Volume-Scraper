@@ -1,6 +1,6 @@
 # TXSE | Volume build-up und Trading Behavior
 
-Datenstand: 2026-10-14. News separat mit Recherche-Stichtag. Quelle: Cboe Exchange, Inc.
+Datenstand: 2026-10-15. News separat mit Recherche-Stichtag. Quelle: Cboe Exchange, Inc.
 
 ![ORC TXSE Dashboard](charts/txse_dashboard.png)
 
@@ -8,18 +8,18 @@ Datenstand: 2026-10-14. News separat mit Recherche-Stichtag. Quelle: Cboe Exchan
 
 | Kennzahl | Vorherige 5 Sessions | Letzte 5 Sessions | Veränderung |
 |---|---:|---:|---:|
-| Stück / Tag | 30.42 Mio. | 29.57 Mio. | -2.81% |
-| USD / Tag | 960.37 Mio. | 987.16 Mio. | +2.79% |
-| Abschlüsse / Tag | 197,575.40 | 187,424.20 | -5.14% |
-| Stück / Abschluss | 153.97 | 157.75 | +2.46% |
-| USD / Stück | 31.57 | 33.39 | +5.76% |
-| US-Marktanteil | 0.1764% | 0.1820% | +0.56 bp |
+| Stück / Tag | 29.81 Mio. | 34.00 Mio. | +14.06% |
+| USD / Tag | 959.93 Mio. | 1,051.08 Mio. | +9.50% |
+| Abschlüsse / Tag | 194,199.00 | 198,146.00 | +2.03% |
+| Stück / Abschluss | 153.51 | 171.61 | +11.79% |
+| USD / Stück | 32.20 | 30.91 | -4.00% |
+| US-Marktanteil | 0.1699% | 0.2042% | +3.43 bp |
 
-Fenster: 2026-10-01 bis 2026-10-07 und 2026-10-08 bis 2026-10-14. Quotienten werden aus Summen berechnet, nicht als ungewichtete Tagesmittel.
+Fenster: 2026-10-02 bis 2026-10-08 und 2026-10-09 bis 2026-10-15. Quotienten werden aus Summen berechnet, nicht als ungewichtete Tagesmittel.
 
 ## Aufbau gegenüber der August-Basis
 
-Gegenüber 17.–28.08. (10 Sessions) stieg ADV um 152.1%, Dollarumsatz pro Tag um 228.1% und Abschlüsse pro Tag um 207.7%. Stück je Abschluss veränderten sich von 192.5 auf 157.8. Der gewichtete US-Anteil stieg von 0.0754% auf 0.1820%. Das Wachstum geht damit über einen bloßen Anstieg des gesamten US-Handels hinaus.
+Gegenüber 17.–28.08. (10 Sessions) stieg ADV um 190.0%, Dollarumsatz pro Tag um 249.3% und Abschlüsse pro Tag um 225.3%. Stück je Abschluss veränderten sich von 192.5 auf 171.6. Der gewichtete US-Anteil stieg von 0.0754% auf 0.2042%. Das Wachstum geht damit über einen bloßen Anstieg des gesamten US-Handels hinaus.
 
 ## Auffällige Tage und Mixwechsel
 
@@ -30,17 +30,17 @@ Gegenüber 17.–28.08. (10 Sessions) stieg ADV um 152.1%, Dollarumsatz pro Tag 
 | 2026-08-10 | 7.64 | 238.00 | 39,075 | 22.1% | 50.1% | 195.5 |
 | 2026-08-12 | 20.20 | 390.23 | 128,494 | 8.7% | 57.2% | 157.2 |
 | 2026-09-14 | 20.04 | 683.55 | 171,848 | 17.3% | 54.6% | 116.6 |
-| 2026-10-14 | 35.68 | 1231.89 | 220,417 | 26.1% | 51.2% | 161.9 |
+| 2026-10-15 | 53.03 | 1418.34 | 255,898 | 31.2% | 51.4% | 207.2 |
 
 Die Spitze Ende Juli/Anfang August ist Tape-B-lastig. Tape B ist ein Listing-Universum und kein reiner ETF-Nachweis. Ein niedrigerer aggregierter USD/Stück-Wert und größere Ausführungen erklären, warum Stückzahl allein die wirtschaftliche Größe verzerrt. Einzelne Namen oder Auslöser sind aus diesen Aggregaten nicht bestimmbar.
 
-In den letzten fünf Sessions entfallen 51.4% der Stückzahl auf Tape C. Das ist TXSE-Handel in Nasdaq-gelisteten Wertpapieren, nicht Nasdaqs eigener Ausführungsmarktanteil. Mehr kleinere Ausführungen sind mit stärker fragmentiertem Routing vereinbar; eine Zuordnung zu HFT, Retail oder institutioneller Akkumulation ist damit nicht belegt.
+In den letzten fünf Sessions entfallen 51.9% der Stückzahl auf Tape C. Das ist TXSE-Handel in Nasdaq-gelisteten Wertpapieren, nicht Nasdaqs eigener Ausführungsmarktanteil. Mehr kleinere Ausführungen sind mit stärker fragmentiertem Routing vereinbar; eine Zuordnung zu HFT, Retail oder institutioneller Akkumulation ist damit nicht belegt.
 
 ## Statistischer Anomalie-Screen
 
 Robuster z-Wert = 0,67448975 × (Beobachtung − Median der vorangehenden 20 Sessions) / MAD. Der aktuelle Tag ist von der Referenz ausgeschlossen. Schwelle: |z| > 3,5 in mindestens einer der fünf Kennzahlen. Bei weniger als 20 Vorgängern oder MAD=0 bleibt der Wert leer. Das ist ein deskriptiver Screen in einer jungen, nichtstationären Zeitreihe, kein Manipulationsnachweis.
 
-Markierte Tage: 2026-08-07, 2026-09-01, 2026-09-02, 2026-09-24, 2026-09-25, 2026-09-28. Alle Werte stehen in `data/txse_anomalies.csv`.
+Markierte Tage: 2026-08-07, 2026-09-01, 2026-09-02, 2026-09-24, 2026-09-25, 2026-09-28, 2026-10-15. Alle Werte stehen in `data/txse_anomalies.csv`.
 
 ## Grenzen und nächste Messpunkte
 
@@ -58,4 +58,4 @@ Markierte Tage: 2026-08-07, 2026-09-01, 2026-09-02, 2026-09-24, 2026-09-25, 2026
 
 ## Größenordnung gegenüber Nasdaq (Q)
 
-NASDAQ (Q) erreicht im gleichen 5-Session-Fenster 2.281 Mrd. Stück und 163.66 Mrd. USD pro Tag. TXSE entspricht 1.30% dieses Stückvolumens und 0.60% dieses Dollarumsatzes. Verglichen wird die einzelne Nasdaq-Börse Q, nicht die gesamte Nasdaq-Gruppe und nicht das Listing-Universum Tape C.
+NASDAQ (Q) erreicht im gleichen 5-Session-Fenster 2.273 Mrd. Stück und 165.58 Mrd. USD pro Tag. TXSE entspricht 1.50% dieses Stückvolumens und 0.63% dieses Dollarumsatzes. Verglichen wird die einzelne Nasdaq-Börse Q, nicht die gesamte Nasdaq-Gruppe und nicht das Listing-Universum Tape C.
