@@ -1,29 +1,29 @@
 # TXSE Volume Analysis
 
-**Period:** 2026-10-21 to 2026-10-26 (4 trading days)
+**Period:** 2026-10-22 to 2026-10-27 (4 trading days)
 
 ## Executive summary
 
-TXSE matched **115.03m shares** representing **$4.03bn notional** across **753,685 trades**.
-Average daily volume was **28.76m shares** and average daily notional was **$1.01bn**. Period-weighted U.S. market share was **0.167%**.
-Peak volume was **2026-10-22** at **35.08m shares**. First-to-last volume change: **-4.1%**.
+TXSE matched **114.54m shares** representing **$3.93bn notional** across **735,387 trades**.
+Average daily volume was **28.63m shares** and average daily notional was **$983.02m**. Period-weighted U.S. market share was **0.167%**.
+Peak volume was **2026-10-22** at **35.08m shares**. First-to-last volume change: **-20.2%**.
 
 ## Daily detail
 
 | Date | Shares | Notional | Trades | Mkt share | $/share | Shares/trade |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-10-21 | 28.47m | $953.63m | 189,363 | 0.172% | $33.50 | 150.3 |
 | 2026-10-22 | 35.08m | $1.44bn | 231,529 | 0.181% | $40.97 | 151.5 |
 | 2026-10-23 | 24.19m | $812.02m | 163,805 | 0.154% | $33.56 | 147.7 |
 | 2026-10-26 | 27.29m | $829.99m | 168,988 | 0.160% | $30.41 | 161.5 |
+| 2026-10-27 | 27.98m | $853.14m | 171,065 | 0.169% | $30.49 | 163.6 |
 
 ## Tape mix
 
 | Tape | Shares | Share of TXSE volume | Notional |
 |---|---:|---:|---:|
-| A | 29.27m | 25.4% | $836.83m |
-| B | 34.60m | 30.1% | $1.69bn |
-| C | 51.16m | 44.5% | $1.51bn |
+| A | 30.22m | 26.4% | $839.67m |
+| B | 32.65m | 28.5% | $1.60bn |
+| C | 51.67m | 45.1% | $1.50bn |
 
 ## Interpretation
 
