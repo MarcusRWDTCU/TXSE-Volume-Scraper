@@ -23,6 +23,7 @@ Weekly aggregation of Texas Stock Exchange (F) trading activity.
 | 2026-10-26 to 2026-10-30 | 5 | 154.33m | 30.87m | $5.04bn | 943.1k | 0.173% | 0.341% | +6.7% | 27.6% | 25.9% | 46.6% |
 | 2026-11-02 to 2026-11-06 | 5 | 195.70m | 39.14m | $7.27bn | 1.37m | 0.181% | 0.350% | +26.8% | 26.0% | 30.0% | 44.0% |
 | 2026-11-09 to 2026-11-13 | 5 | 168.51m | 33.70m | $5.44bn | 1.15m | 0.178% | 0.366% | -13.9% | 24.5% | 26.9% | 48.7% |
+| 2026-11-16 to 2026-11-16 | 1 | 36.71m | 36.71m | $1.08bn | 219.7k | 0.198% | 0.405% | +8.9% | 23.3% | 31.2% | 45.5% |
 
 **Definitions:** Consolidated market share uses total U.S. consolidated reported volume, matching Cboe's published market-share convention. Exchange-only share excludes FINRA/TRF off-exchange volume and compares TXSE only with exchange-matched volume.
 
